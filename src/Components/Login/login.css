@@ -1,0 +1,17 @@
+.login-main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+}
+.login-in-functionality{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

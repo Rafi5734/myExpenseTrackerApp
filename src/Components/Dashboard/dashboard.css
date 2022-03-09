@@ -1,0 +1,17 @@
+.dashboard-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.main-title{
+    width: 100%;
+    height: 30px;
+}
+.main-dashboard{
+    margin-top: 150px;
+}
+.graph-per-card{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
