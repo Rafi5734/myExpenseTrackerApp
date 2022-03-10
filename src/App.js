@@ -8,6 +8,7 @@ import Calculator from "./Components/Calculator/Calculator";
 import Login from "./Components/Login/Login";
 import Registration from "./Components/Registration/Registration";
 import NavImg from "./Components/images/budget.png";
+import AuthProvider from "./Contexts/AuthProvider/AuthProvider";
 function App() {
   return (
     <div className="App">
@@ -50,7 +51,8 @@ function App() {
           </Container>
         </Navbar>
 
-        <Routes>
+        <AuthProvider>
+          <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="history" element={<History />} />
@@ -59,6 +61,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="registration" element={<Registration />} />
         </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </div>
   );
