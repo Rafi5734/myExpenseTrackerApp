@@ -9,7 +9,9 @@ import Login from "./Components/Login/Login";
 import Registration from "./Components/Registration/Registration";
 import NavImg from "./Components/images/budget.png";
 import AuthProvider from "./Contexts/AuthProvider/AuthProvider";
+// import useAuth from "./Hooks/useAuth";
 function App() {
+  // const { user, logOut } = useAuth();
   return (
     <div className="App">
       <BrowserRouter>
@@ -40,27 +42,43 @@ function App() {
                   Calculator
                 </Link>
               </Nav>
+
               <Form className="d-flex">
-                <Button variant="outline-success">
-                  <Link to="/login" className="me-3">
-                    SignIn
-                  </Link>
-                </Button>{" "}
-              </Form>
+                  <Button variant="outline-success">
+                    <Link to="/" className="me-3">
+                      SignIn
+                    </Link>
+                  </Button>{" "}
+                </Form>
+              {/* {user?.email ? (
+                <Form className="d-flex">
+                  <Button variant="outline-success" onClick={logOut}>
+                      SignOut
+                  </Button>{" "}
+                </Form>
+              ) : (
+                <Form className="d-flex">
+                  <Button variant="outline-success">
+                    <Link to="/" className="me-3">
+                      SignIn
+                    </Link>
+                  </Button>{" "}
+                </Form>
+              )} */}
             </Navbar.Collapse>
           </Container>
         </Navbar>
 
         <AuthProvider>
           <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="history" element={<History />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="calculator" element={<Calculator />} />
-          <Route path="login" element={<Login />} />
-          <Route path="registration" element={<Registration />} />
-        </Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="history" element={<History />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="calculator" element={<Calculator />} />
+            <Route path="login" element={<Login />} />
+            <Route path="registration" element={<Registration />} />
+          </Routes>
         </AuthProvider>
       </BrowserRouter>
     </div>

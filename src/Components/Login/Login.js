@@ -3,7 +3,11 @@ import { Button, Container, FloatingLabel, Form } from "react-bootstrap";
 import "./login.css";
 import LoginSvg from "../images/undraw_secure_login_pdn4.svg";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 const Login = () => {
+
+  const { user } = useAuth();
+  console.log(user);
 
   const [email, setEmail] = useState({});
   const [password, setPassword] = useState({});
