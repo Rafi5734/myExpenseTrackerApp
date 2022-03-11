@@ -10,7 +10,7 @@ const Home = () => {
 
 
       <Container>
-        <Card className="Home-bill mt-5 mb-5">
+        <Card className="Home-bill mb-5">
           <h3 className="mb-5 mt-5">Home Bill</h3>
           <p>
             <strong>Home bill: </strong>

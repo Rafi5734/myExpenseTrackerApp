@@ -3,19 +3,18 @@ import { Button, Container, FloatingLabel, Form } from "react-bootstrap";
 import "./login.css";
 import LoginSvg from "../images/undraw_secure_login_pdn4.svg";
 import { Link } from "react-router-dom";
-import useAuth from "../../Hooks/useAuth";
+import useFirebase from "../../Hooks/useFirebase";
+
 const Login = () => {
 
-  const { user } = useAuth();
-  console.log(user);
+  const {user, signInUser, isLoading, error} = useFirebase();
 
   const [email, setEmail] = useState({});
   const [password, setPassword] = useState({});
 
   //handle login button
   const handleLogin = () => {
-    console.log("login");
-    console.log(email, password);
+    signInUser(email, password);
   };
 
   //handle email input field
