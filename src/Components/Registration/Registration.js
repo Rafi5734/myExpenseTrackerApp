@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Alert,
-  Button,
   Container,
   FloatingLabel,
   Form,
@@ -10,10 +9,13 @@ import {
 import "./registration.css";
 import { Link } from "react-router-dom";
 import useFirebase from "../../Hooks/useFirebase";
+import { useNavigate } from "react-router-dom";
+
 const Registration = () => {
+  let navigate = useNavigate();
+
   const { registerUser, isLoading, user, error } = useFirebase();
 
-  const [name, setName] = useState({});
   const [email, setEmail] = useState({});
   const [password, setPassword] = useState({});
   const [repassword, setRePassword] = useState({});
@@ -25,14 +27,12 @@ const Registration = () => {
     }
 
     registerUser(email, password);
+
+    if (user.email) {
+      navigate("/");
+    }
   };
 
-  //handle full name
-  const handleFullName = (e) => {
-    setName(e.target.value);
-  };
-
-  //handle Email
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -49,7 +49,7 @@ const Registration = () => {
 
   return (
     <div>
-      <Container className="registration-main mt-5 mb-5">
+      <Container className="registration-main mb-5">
         <div>
           <img
             src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -69,7 +69,7 @@ const Registration = () => {
                 <Form.Control
                   type="text"
                   placeholder="Full Name"
-                  onChange={handleFullName}
+                  // onChange={handleFullName}
                 />
               </FloatingLabel>
 
@@ -125,7 +125,7 @@ const Registration = () => {
           </button>
 
           {user.email && (
-            <Alert variant="success">
+            <Alert variant="success" className="mt-5">
               Successfully Registered a account✔✔✔
             </Alert>
           )}

@@ -61,9 +61,10 @@ const Dashboard = () => {
   return (
     <>
       <div>
-        <div className="main-title container">
-          <h1 className="mt-5 mb-5">Dashboard</h1>
-        </div>
+        <Container className="dashboard-title">
+          <h1 className="mt-5 mb-3">Dashboard</h1>
+          <hr></hr>
+        </Container>
 
         <Container className="dashboard-cards mt-5 mb-5">
           <Card style={{ width: "18rem" }}>

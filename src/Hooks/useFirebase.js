@@ -60,12 +60,11 @@ const useFirebase = () => {
       .then(() => {
         // Sign-out successful.
       })
-      .catch((error) => { 
+      .catch((error) => {
         setError(error.message);
       })
       .finally(() => setIsLoading(false));
   };
-
 
   return {
     isLoading,
@@ -73,7 +72,8 @@ const useFirebase = () => {
     registerUser,
     logOut,
     signInUser,
-    error
+    error,
+    setIsLoading,
   };
 };
 

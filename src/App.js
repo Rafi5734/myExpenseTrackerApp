@@ -9,6 +9,7 @@ import Login from "./Components/Login/Login";
 import Registration from "./Components/Registration/Registration";
 import AuthProvider from "./Contexts/AuthProvider/AuthProvider";
 import NavigationBar from "./Components/NavigationBar/NavigationBar";
+import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 function App() {
   return (
     <div className="App">
@@ -19,9 +20,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="home" element={<Home />} />
-            <Route path="history" element={<History />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="calculator" element={<Calculator />} />
+            <Route path="history" element={<PrivateRoute><History /></PrivateRoute>} />
+            <Route path="dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+            <Route path="calculator" element={<PrivateRoute><Calculator /></PrivateRoute>} />
             <Route path="login" element={<Login />} />
             <Route path="registration" element={<Registration />} />
           </Routes>
