@@ -1,81 +1,236 @@
 import React from "react";
-import { Badge, Card, Container } from "react-bootstrap";
+import { Badge, Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./home.css";
 const Home = () => {
   return (
     <div className="mt-5 mb-5">
-
-          
-          {/* Home bill */}
-
+      {/* Home bill */}
 
       <Container>
-        <Card className="Home-bill mb-5">
-          <h3 className="mb-5 mt-5">Home Bill</h3>
-          <p>
-            <strong>Home bill: </strong>
-            <span>0000$</span>
-          </p>
-          <p>
-            <strong>Paid bill: </strong>
-            <span>0000$</span>
-          </p>
-          <p>
-            <strong>Status: </strong>
-            <Badge bg="success">Paid</Badge>
-          </p>
-          <p>
-            <strong>Time: </strong>
-            <span>3/08/2022; 10:46PM</span>
-          </p>
+        <Card className="home-bill mb-5">
+          <Card.Header as="h1">Home Service & Rent Bill</Card.Header>
+          <Card.Body>
+            <Row>
+              <Col lg={4} mb={6} sm={12} className="mb-3">
+                <Card body>
+                  <p>
+                    <strong>Home bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Food bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Others bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Status: </strong>
+                    <Badge bg="success">Paid</Badge>
+                  </p>
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card>
+              </Col>
+              <Col lg={4} mb={6} sm={12} className="mb-3">
+                <Card body>
+                  <p>
+                    <strong>Home bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Food bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Others bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Status: </strong>
+                    <Badge bg="success">Paid</Badge>
+                  </p>
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card>
+              </Col>
+              <Col lg={4} mb={6} sm={12} className="mb-3">
+                <Card body>
+                  <p>
+                    <strong>Home bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Food bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Others bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Status: </strong>
+                    <Badge bg="success">Paid</Badge>
+                  </p>
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card>
+              </Col>
+            </Row>
+          </Card.Body>
         </Card>
-          </Container>
-          
+      </Container>
 
-          {/* Mobile bill */}
+      {/* Mobile bill */}
 
-          
       <Container>
-        <Card className="Home-bill mt-5 mb-5">
-          <h3 className="mb-5 mt-5">Mobile Bill</h3>
-          <p>
-            <strong>Mobile bill: </strong>
-            <span>0000$</span>
-          </p>
-          <p className="mb-5">
-            <strong>Paid bill: </strong>
-            <span>0000$</span>
-          </p>
-          {/* <p>
-            <strong>Received bill: </strong>
-            <span>0000$</span>
-          </p>
-          <p>
-            <strong>Time: </strong>
-            <span>3/08/2022; 10:46PM</span>
-          </p> */}
+        <Card className="mb-5">
+          <Card.Header as="h1">Cell Phone Service & Recharge Bill</Card.Header>
+          <Card.Body>
+            <Row>
+              <Col lg={4} mb={6} sm={12}>
+                <Card body>
+                  <p>
+                    <strong>Service bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Recharge bill: </strong>
+                    <span>0000$</span>
+                  </p>
+
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card>
+              </Col>
+              <Col lg={4} mb={6} sm={12}>
+                {/* <Card body>
+                  <p>
+                    <strong>Home bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Paid bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Status: </strong>
+                    <Badge bg="success">Paid</Badge>
+                  </p>
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card> */}
+              </Col>
+              <Col lg={4} mb={6} sm={12}>
+                {/* <Card body>
+                  <p>
+                    <strong>Home bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Paid bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Status: </strong>
+                    <Badge bg="success">Paid</Badge>
+                  </p>
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card> */}
+              </Col>
+            </Row>
+          </Card.Body>
         </Card>
-          </Container>
-          
+      </Container>
 
-          {/* Extra bill */}
+      {/* Extra bill */}
 
-          
       <Container>
-        <Card className="Home-bill mt-5 mb-5">
-          <h3 className="mb-5 mt-5">Extra Bill</h3>
-          <p>
-            <strong>Extra bill: </strong>
-            <span>0000$</span>
-          </p>
-          <p>
-            <strong>Paid bill: </strong>
-            <span>0000$</span>
-          </p>
-          <p>
-            <strong>Time: </strong>
-            <span>3/08/2022; 10:46PM</span>
-          </p>
+        <Card className="mb-5">
+          <Card.Header as="h1">Extra Bill</Card.Header>
+          <Card.Body>
+            <Row>
+              <Col lg={4} mb={6} sm={12}>
+                <Card body>
+                  <p>
+                    <strong>Cloths bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Hair & Beard Cutting bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Shoes bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Others bill: </strong>
+                    <span>0000$</span>
+                  </p>
+
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card>
+              </Col>
+              <Col lg={4} mb={6} sm={12}>
+                {/* <Card body>
+                  <p>
+                    <strong>Home bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Paid bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Status: </strong>
+                    <Badge bg="success">Paid</Badge>
+                  </p>
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card> */}
+              </Col>
+              <Col lg={4} mb={6} sm={12}>
+                {/* <Card body>
+                  <p>
+                    <strong>Home bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Paid bill: </strong>
+                    <span>0000$</span>
+                  </p>
+                  <p>
+                    <strong>Status: </strong>
+                    <Badge bg="success">Paid</Badge>
+                  </p>
+                  <p>
+                    <strong>Time: </strong>
+                    <span>3/08/2022; 10:46PM</span>
+                  </p>
+                </Card> */}
+              </Col>
+            </Row>
+          </Card.Body>
         </Card>
       </Container>
     </div>

@@ -1,7 +1,3 @@
-.Home-bill{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.home-bill{
     margin-top: 100px;
 }

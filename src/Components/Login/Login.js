@@ -48,7 +48,7 @@ const Login = () => {
     <div>
       <Container className="login-main mb-5">
         <div className="w-100">
-          <img src={LoginSvg} alt="login-svg"></img>
+          <img src={LoginSvg} alt="login-svg" className="img-fluid mt-5"></img>
         </div>
 
         <div className="login-in-functionality">

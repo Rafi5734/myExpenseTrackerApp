@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Alert,
+  Button,
   Container,
   FloatingLabel,
   Form,
@@ -10,6 +11,7 @@ import "./registration.css";
 import { Link } from "react-router-dom";
 import useFirebase from "../../Hooks/useFirebase";
 import { useNavigate } from "react-router-dom";
+import RegistrationLogo from "../images/registration_logo.svg";
 
 const Registration = () => {
   let navigate = useNavigate();
@@ -28,9 +30,9 @@ const Registration = () => {
 
     registerUser(email, password);
 
-    if (user.email) {
+    setTimeout(() => {
       navigate("/");
-    }
+    }, 1000);
   };
 
   const handleEmail = (e) => {
@@ -52,9 +54,9 @@ const Registration = () => {
       <Container className="registration-main mb-5">
         <div>
           <img
-            src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt="register-img"
-            className="w-100 mt-5"
+            src={RegistrationLogo}
+            className="w-100 mt-5 img-fluid mt-5"
+            alt="Registration-logo"
           ></img>
         </div>
         <div>
@@ -115,14 +117,24 @@ const Registration = () => {
             Already have an account? <Link to="/login">Login.</Link>
           </p>
 
-          <button
+          {!isLoading && (
+            <Button
+              variant="outline-success"
+              className="mt-5"
+              onClick={handleRegistration}
+            >
+              Register
+            </Button>
+          )}
+
+          {/* <button
             type="button"
             class="btn btn-outline-dark"
             onClick={handleRegistration}
             id="liveToastBtn"
           >
             Register
-          </button>
+          </button> */}
 
           {user.email && (
             <Alert variant="success" className="mt-5">

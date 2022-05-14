@@ -14,15 +14,35 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        
         <NavigationBar></NavigationBar>
         <AuthProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="home" element={<Home />} />
-            <Route path="history" element={<PrivateRoute><History /></PrivateRoute>} />
-            <Route path="dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-            <Route path="calculator" element={<PrivateRoute><Calculator /></PrivateRoute>} />
+            <Route
+              path="history"
+              element={
+                <PrivateRoute>
+                  <History />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="dashboard"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="calculator"
+              element={
+                <PrivateRoute>
+                  <Calculator />
+                </PrivateRoute>
+              }
+            />
             <Route path="login" element={<Login />} />
             <Route path="registration" element={<Registration />} />
           </Routes>

@@ -4,17 +4,20 @@ import { Link } from "react-router-dom";
 import useFirebase from "../../Hooks/useFirebase";
 import NavImg from "../images/logo-name.png";
 const NavigationBar = () => {
+  const { user, logOut } = useFirebase();
 
-    const { user, logOut } = useFirebase();
-
-    console.log(user);
+  // console.log(user);
   return (
     <div>
       <Navbar bg="light" expand="lg" fixed="top">
         <Container>
           <Navbar.Brand href="#">
             <Link to="/home">
-              <img src="https://see.fontimg.com/api/renderfont4/3zRBM/eyJyIjoiZnMiLCJoIjo3MywidyI6MTAwMCwiZnMiOjczLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/RXhwZW5zZSB0cmFja2Vy/attack-graffiti.png" alt="nab-logo" className="nav-img"></img>
+              <img
+                src="https://see.fontimg.com/api/renderfont4/3zRBM/eyJyIjoiZnMiLCJoIjo3MywidyI6MTAwMCwiZnMiOjczLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/RXhwZW5zZSB0cmFja2Vy/attack-graffiti.png"
+                alt="nab-logo"
+                className="nav-img"
+              ></img>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -38,22 +41,21 @@ const NavigationBar = () => {
               </Link>
             </Nav>
 
-            
             {user?.email ? (
-                <Form className="d-flex">
-                  <Button variant="outline-success" onClick={logOut}>
-                      SignOut
-                  </Button>{" "}
-                </Form>
-              ) : (
-                <Form className="d-flex">
-                  <Button variant="outline-success">
-                    <Link to="/login" className="me-3">
-                      SignIn
-                    </Link>
-                  </Button>{" "}
-                </Form>
-              )}
+              <Form className="d-flex">
+                <Button variant="outline-success" onClick={logOut}>
+                  Log Out
+                </Button>{" "}
+              </Form>
+            ) : (
+              <Form className="d-flex">
+                <Button variant="outline-success">
+                  <Link to="/login" className="me-3">
+                    log In
+                  </Link>
+                </Button>{" "}
+              </Form>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
